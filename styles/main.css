@@ -1,0 +1,85 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+
+html, body,{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font-family: 'Sumana', serif;
+  vertical-align: baseline;
+}
+/* Move nav bar to top of page */
+nav {
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: #01213F;
+     }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #01213F;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #D8B254;
+}
+
+
+
+main {
+     position: relative;
+     top: 30px;
+     }
+
+div.banner1 {
+  background-image: url("images/homepage-piano.jpg");
+  background-size: 100%;
+  background-color: #01213F;
+}
+
+div.transbox {
+  width: 25%;
+  margin: 3em;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+
+div.transbox h3, p {
+  color: #0A0B0A;
+  text-decoration: none;
+}
+div.transbox a {
+  color: #0A0B0A;
+  font-weight: bold;
+  text-decoration: none;
+}
