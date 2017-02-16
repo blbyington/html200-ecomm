@@ -32,14 +32,16 @@
       <h1>Winter Wear Warehouse</h1>
     </header>
   <aside>
-    <form name="filterBy" onsubmit="capture();">
-      <label>Filter By:
-        <select name="filter">
-          <option value="">Choose One</option>
-          <option value="price">Price</option>
-          <option value="name">Name</option>
-        </select>
-      </label>
+<form name="filterBy" onsubmit="capture();">
+  <label class="filter-by">Filter By:
+    <select name="filter">
+      <option value="">Choose One</option>
+      <option value="price">Price</option>
+      <option value="name">Name</option>
+    </select>
+  </label>
+  <button class="btn btn-primary btn-sm" type="submit">Sort</button>
+ </form>
 
       <input type="submit" value="Sort">
     </form>
