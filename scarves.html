@@ -1,6 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Winter Wear Warehouse</title>
+
+  <meta charset="utf-8">
+
+<!--  <link rel="stylesheet" href="styles/reset.css">-->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- replace with your personal Font Awesome CDN link -->
+  <script src="https://use.fontawesome.com/b0d0cb12f8.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sumana" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
   
+<body>  
+    <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scarves.html">Scarves</a></li>
+      <li><a href="hats.html">Hats</a></li>
+      <li><a href="gloves.html">Gloves</a></li>
+        <li style="float:right"><a class="active" href="#about">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+    </ul>
+    </nav>
+  <main>
+    <header>
+      <img id="header-logo" src="images/logo-soft-black-01.png" alt="logo" width="15%">
+
+      <h1>Winter Wear Warehouse</h1>
+    </header>
   <aside>
-    <form>
+    <form name="filterBy" onsubmit="capture();">
       <label>Filter By:
         <select name="filter">
           <option value="">Choose One</option>
@@ -12,25 +44,45 @@
       <input type="submit" value="Sort">
     </form>
   </aside>
+  <h2>Scarves</h2>
 
-<section>
-    <h2>Scarves</h2>
-
-    <div class="item-container">
+  <div class="item-container">
+    <div class="item">
+      <figure class="">
+        <img src="images/reversible-plaid.jpg" alt="Reversible Plaid">
+          <figcaption><h4>Reversible Plaid</h4>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.<p class="price">$26.99</p></figcaption>
+      </figure>
+    </div>
       <div class="item">
         <figure class="">
-          <img src="images/reversible-plaid.jpg" alt="Reversible Plaid">
-          <figcaption><h4>Reversible Plaid</h4>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.<p class="price">$26.99</p></figcaption>
+          <img src="images/wool-cable.jpeg" alt="Wool Cable Knit">
+          <figcaption><h4>Wool Cable Knit</h4>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported..<p class="price">$49.99</p></figcaption>
         </figure>
-        
-       
-        
-        
-        <!--  "name": "Reversible Plaid",
-    "price": 26.99,
-    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-    "imageTitle": "reversible-plaid.jpg"-->
-
-      </div>
     </div>
-  </section>
+    <div class="item">
+      <figure class="">
+        <img src="images/northern-lights.jpg" alt="Northern Lights">
+        <figcaption><h4>Northern Lights</h4>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.<p class="price">$29.99</p></figcaption>
+      </figure>
+    </div>
+    <div class="item">
+      <figure class="">
+        <img src="images/ombre-infinity.jpg" alt="Ombre Infinity">
+        <figcaption><h4>Reversible Plaid</h4>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.<p class="price">$11.99</p></figcaption>
+      </figure>
+    </div>
+  </div>
+  
+
+
+
+
+
+</main>
+  <footer>
+    <p>Learn More about our scarves</p>
+  
+  </footer>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

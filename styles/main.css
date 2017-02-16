@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+/*html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -10,16 +10,33 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video 
+time, mark, audio, video */
 
-html, body,{
+/* COLOR PALETTE
+LT BL #89A2DA
+DK BL #01213F
+SOFT BLK #0A0B0A
+YELLOW: #D8B254
+BURNT RED: #8E3E22
+*/
+
+html, body {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 16px;
   font-family: 'Sumana', serif;
-  vertical-align: baseline;
 }
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Sumana', serif;
+    padding: none;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* Move nav bar to top of page */
 nav {
      width: 100%;
@@ -45,7 +62,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 6px 14px;
     text-decoration: none;
 }
 
@@ -53,22 +70,42 @@ li a:hover {
     background-color: #D8B254;
 }
 
-
+img{
+  max-width: 100%;
+}
 
 main {
      position: relative;
-     top: 30px;
+     top: 60px;
      }
 
-div.banner1 {
-  background-image: url("images/homepage-piano.jpg");
-  background-size: 100%;
-  background-color: #01213F;
+header {
+  padding: 2%;
 }
 
+#header-logo{
+    float: left;
+    margin: 1%;
+    margin-left 1%: 
+}
+
+div {
+  width: 100%;
+}
+
+#about {
+  background-image: url('../images/homepage-piano.jpg');
+  flex-shrink: 0;
+  max-width: 100%;
+  max-height: 100%
+  background-color: burlywood;
+  position: relative;
+  overflow: hidden;
+}
 div.transbox {
-  width: 25%;
+  width: 35%;
   margin: 3em;
+  padding: 0em 2em 1em 2em;
   background-color: #ffffff;
   opacity: 0.6;
   filter: alpha(opacity=60); 
@@ -82,4 +119,24 @@ div.transbox a {
   color: #0A0B0A;
   font-weight: bold;
   text-decoration: none;
+}
+
+div.item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+div.item {
+  width: 25%;
+}
+
+footer {
+  background-color: #01213F;
+  padding: 2%;
+  font-size: 10px;
+  color: #D8B254;
+  height: 25%;
+  width: 100%;
 }

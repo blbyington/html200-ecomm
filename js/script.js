@@ -56,7 +56,7 @@ for (var i = 0; i < products.length; i++) {
   console.log(products[i].price);
 }*/
 
-/*cheri's solution*/
+/*cheri's solution
 -for (var i in products) {
  +// This is the syntax for looping through arrays that we learned in class 1. We'll use it to loop through the products array.
  +for(var i = 0; i<products.length; i++){
@@ -68,4 +68,25 @@ for (var i = 0; i < products.length; i++) {
     console.log(products[i].name);
     console.log(products[i].description);
     console.log(products[i].price);
-  }
+  }*/
+
+function capture() {
+  console.log("Filter by: " + document.filterBy.filter.value);
+  event.preventDefault();
+}
+
+//WIP if else sorting... 
+
+//var price = products.slice(0);
+//byPrice.sort(function(a,b) {
+//    return a.price - b.price;
+//});
+//console.log('by price:');
+//console.log(byPrice);
+
+//var name = products.slice(0);
+//byName.sort(function(a,b) {
+//    return a.name - b.name;
+//});
+//console.log('by name:');
+//console.log(byName);
