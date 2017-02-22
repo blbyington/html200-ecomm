@@ -71,9 +71,27 @@ for (var i = 0; i < products.length; i++) {
   }*/
 
 function capture() {
-  console.log("Filter by: " + document.filterBy.filter.value);
+  console.log("Sort by: " + document.sortBy.filter.value);
   event.preventDefault();
 }
+
+function sumPrices(cartArray) {
+  //for loop through arra, sum value of cart items
+  var total = 0;
+  
+  for(var i=0; i<cartArray.length; i++){
+  console.log(cartArray[i].price);
+    
+    total = total + cartArray[i].price;
+    }
+  console.log("Total: " + total);
+
+}
+//to-do: print total as html to page next to cart icon, runs when item added or taken away.
+
+
+
+
 
 //WIP if else sorting... 
 

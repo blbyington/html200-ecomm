@@ -26,11 +26,13 @@ html, body {
   border: 0;
   font-size: 16px;
   font-family: 'Sumana', serif;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Sumana', serif;
     padding: none;
+    display: inline;
 }
 
 p {
@@ -81,9 +83,12 @@ main {
 
 header {
   padding: 2%;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-#header-logo{
+header-logo{
+    max-width: 100%;
     float: left;
     margin: 1%;
     margin-left 1%: 
@@ -91,20 +96,22 @@ header {
 
 div {
   width: 100%;
+  border-top-color: #D8B254;
 }
 
 #about {
   background-image: url('../images/homepage-piano.jpg');
+  background-repeat: no-repeat;
+  background-color: chartreuse;
+  background-size: 100%;
   flex-shrink: 0;
-  max-width: 100%;
-  max-height: 100%
-  background-color: burlywood;
+  height: 50%;
   position: relative;
   overflow: hidden;
 }
 div.transbox {
   width: 35%;
-  margin: 3em;
+  margin: 15% 5% 5% 5%;
   padding: 0em 2em 1em 2em;
   background-color: #ffffff;
   opacity: 0.6;
@@ -122,21 +129,24 @@ div.transbox a {
 }
 
 div.item-container {
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 div.item {
-  width: 25%;
+  width: 300px;
 }
 
 footer {
   background-color: #01213F;
-  padding: 2%;
+  position: sticky;
+  padding-top: 5px;
   font-size: 10px;
   color: #D8B254;
-  height: 25%;
+  height: 10%;
   width: 100%;
 }
