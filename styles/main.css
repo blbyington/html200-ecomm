@@ -82,7 +82,9 @@ main {
      }
 
 header {
+  margin-top: 0px;
   padding: 2%;
+  background-color: white;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -102,7 +104,7 @@ div {
 #about {
   background-image: url('../images/homepage-piano.jpg');
   background-repeat: no-repeat;
-  background-color: chartreuse;
+  background-color: #01213F;
   background-size: 100%;
   flex-shrink: 0;
   height: 50%;
@@ -142,11 +144,69 @@ div.item {
 }
 
 footer {
+  margin-top: 10rem;
+  padding: 2%;
   background-color: #01213F;
-  position: sticky;
-  padding-top: 5px;
-  font-size: 10px;
+  position: relative;
+  width: 98%;
+}
+
+footer p {
+    font-size: 10px;
   color: #D8B254;
-  height: 10%;
+}
+
+@media (max-width: 550px){
+ 
+  nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0em;
+  padding: .25em;
+}
+  nav li {
   width: 100%;
+  list-style: none;
+  display: block;
+}
+
+  #about{
+  background-image: url('../images/homepage-piano.jpg');
+  background-repeat: no-repeat;
+  background-color: #01213F;
+  background-size: 250%;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  }
+  div.transbox {
+  width: 100%;
+  margin: 50px 0px;
+  padding: 0em 2em 1em 2em;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+  header {
+  margin-top: 250px;
+  padding: 1em;
+  background-color: white;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+  #header-logo {
+    max-width: 100%;
+    float: center;
+    margin: 0;
+    padding: 5em;
+}
+footer {
+  margin-top: 10rem;
+  padding: 5%;
+  background-color: #01213F;
+  position: relative;
+  width: 90%;
+}
 }
