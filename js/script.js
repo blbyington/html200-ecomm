@@ -1,3 +1,8 @@
+//test console log
+console.log("banana")
+
+
+//scarf information
 var products = [
   {
     "name": "Reversible Plaid",
@@ -47,14 +52,93 @@ var products = [
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg"
   }
-
 ]
-/* my solution
-for (var i = 0; i < products.length; i++) {
-  console.log(products[i].name);
-  console.log(products[i].description);
-  console.log(products[i].price);
-}*/
+
+//sort by script
+function filterProducts() {
+
+  var sortMethod = document.sortBy.filter.value;
+  if(sortMethod == "name") {
+    sortByName();
+  }
+  
+  else if (sortMethod == "price") {
+     { 
+      sortByPrice();
+  } 
+}
+  event.preventDefault();
+}
+
+//sort by name
+function sortByName(){
+  products.sort(function(a,b){
+    if(a.name.toLowerCase() < b.name.toLowerCase())
+      return -1;
+    if(a.name.toLowerCase() > b.name.toLowerCase())
+      return 1;
+    return 0;
+  });
+  console.log(products);
+}
+
+function sortByPrice() {
+  products.sort(function(a,b){
+    return a.price - b.price;
+});
+  console.log(products);
+}
+
+
+
+//sum price of cart items
+function sumPrices(cartArray) {
+
+  var total = 0;
+  
+  for(var i=0; i<cartArray.length; i++){
+  console.log(cartArray[i].price);
+    
+    total = total + cartArray[i].price;
+    }
+  console.log("Total: " + total);
+
+}
+
+//number of items in cart - html halp on cart icon...
+function sumPrices(cartArray) {
+  // for loop through array, sum value of price attributes for each object
+  var total = 0;
+  
+  for(var i= 0; i < cartArray.length; i++) {
+
+    if(cartArray[i].price){
+          total = total + cartArray[i].price;
+    }
+  }
+
+  console.log(total);
+}
+
+//addItem script
+function addItem(item) {
+  var ProductIndex = cart.indexOf(item);
+  if (ProductIndex <= 0) {
+    cart.push(item);
+  }
+  console.log(cart);
+}
+
+//removeItem
+function removeItem(item) {
+  var ProductIndex = cart.indexOf(item);
+  if (ProductIndex != -1) {
+    cart.splice(ProductIndex, 1);
+  }
+  console.log(cart);
+}
+
+
 
 /*cheri's solution
 -for (var i in products) {
@@ -70,27 +154,20 @@ for (var i = 0; i < products.length; i++) {
     console.log(products[i].price);
   }*/
 
-function capture() {
-  console.log("Sort by: " + document.sortBy.filter.value);
-  event.preventDefault();
-}
 
-function sumPrices(cartArray) {
-  //for loop through arra, sum value of cart items
-  var total = 0;
-  
-  for(var i=0; i<cartArray.length; i++){
-  console.log(cartArray[i].price);
-    
-    total = total + cartArray[i].price;
-    }
-  console.log("Total: " + total);
-
-}
 //to-do: print total as html to page next to cart icon, runs when item added or taken away.
 
 
 
+//Add +/- button to item listings in HTML - done
+
+
+//Define a global variable in JS, array “cart”.
+
+
+//Write onclick handler in JS that takes item names, pushes them into “cart” array if they are not yet there, removes them if they are, console logs cart.length.
+
+//Add onclick() to +/- button to trigger handler.
 
 
 //WIP if else sorting... 
