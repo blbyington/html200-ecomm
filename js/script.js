@@ -1,6 +1,8 @@
 //test console log
 console.log("banana")
 
+//cart defined
+var cart = [ ];
 
 //scarf information
 var products = [
@@ -122,7 +124,8 @@ function sumPrices(cartArray) {
 
 //addItem script
 function addItem(item) {
-  var ProductIndex = cart.indexOf(item);
+  var ProductIndex = cart.indexOf(item); //cart is not defined error... 
+  
   if (ProductIndex <= 0) {
     cart.push(item);
   }
@@ -139,7 +142,6 @@ function removeItem(item) {
 }
 
 
-
 /*cheri's solution
 -for (var i in products) {
  +// This is the syntax for looping through arrays that we learned in class 1. We'll use it to loop through the products array.
@@ -153,7 +155,16 @@ function removeItem(item) {
     console.log(products[i].description);
     console.log(products[i].price);
   }*/
+for (var i = 0; i<products.length; i++) {
+    console.log(products[i].name);
+    console.log(products[i].description);
+    console.log(products[i].price);
+    }
 
+function capture(){
+  console.log(document.filterBy.filter.value);
+  event.preventDefault();
+}
 
 //to-do: print total as html to page next to cart icon, runs when item added or taken away.
 
