@@ -54,6 +54,16 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ]
+for (var i = 0; i<products.length; i++) {
+    console.log(products[i].name);
+    console.log(products[i].description);
+    console.log(products[i].price);
+    }
+
+function capture(){
+  console.log(document.filterBy.filter.value);
+  event.preventDefault();
+}
 
 
 //sort by
@@ -139,16 +149,6 @@ function removeItem(item) {
     console.log(products[i].description);
     console.log(products[i].price);
   }*/
-//for (var i = 0; i<products.length; i++) {
-//    console.log(products[i].name);
-//    console.log(products[i].description);
-//    console.log(products[i].price);
-//    }
-//
-//function capture(){
-//  console.log(document.filterBy.filter.value);
-//  event.preventDefault();
-//}
 
 //to-do: print total as html to page next to cart icon, runs when item added or taken away.
 
