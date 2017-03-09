@@ -1,5 +1,5 @@
 //test console log
-console.log("banana")
+//console.log("banana")
 
 //cart defined
 var cart = [ ];
@@ -56,40 +56,29 @@ var products = [
   }
 ]
 
-//sort by name
+//sort by
+
 function sortByName(){
-  products.sort(function(a,b){
-    if(a.name.toLowerCase() < b.name.toLowerCase())
-      return -1;
-    if(a.name.toLowerCase() > b.name.toLowerCase())
-      return 1;
-    return 0;
-  });
-  console.log(products);
+  var sortedArray = nil;
+  return sortedArray;
 }
 
-function sortByPrice() {
-  products.sort(function(a,b){
-    return a.price - b.price;
-});
-  console.log(products);
+function sortByPrice(){
+  var sortedArray = nil; 
+  return sortedArray;
 }
-//sort by script
-function filterProducts() {
 
-  var sortMethod = document.sortBy.filter.value;
-  if(sortMethod == "name") {
-    sortByName();
+function formSubmit(){
+  var sortBy = "price";
+  var sortedArray;
+  if sortBy == "price" {
+    sortedArray = sortByPrice();
   }
-  
-  else if (sortMethod == "price") {
-     { 
-      sortByPrice();
-  } 
+  else {
+    sortedArray = sortByName();
+  }
+  console.log(sortedArray);
 }
-  event.preventDefault();
-}
-
 
 //sum price of cart items
 function sumPrices(cartArray) {
