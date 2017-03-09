@@ -2,9 +2,8 @@
 //console.log("banana")
 
 //cart defined
-var cart = [ ];
+var cart = [];
 
-//scarf information
 var products = [
   {
     "name": "Reversible Plaid",
@@ -39,7 +38,7 @@ var products = [
   {
     "name": "Multi Color",
     "price": 22.99,
-    "description": "The Who What Wear Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit, soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic",
+    "description": "The Who What Wear Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic",
     "imageTitle": "multi-color.jpeg"
   },
   {
@@ -56,29 +55,42 @@ var products = [
   }
 ]
 
+
 //sort by
-
-function sortByName(){
-  var sortedArray = nil;
-  return sortedArray;
-}
-
-function sortByPrice(){
-  var sortedArray = nil; 
-  return sortedArray;
-}
-
-function formSubmit(){
-  var sortBy = "price";
-  var sortedArray;
-  if sortBy == "price" {
-    sortedArray = sortByPrice();
+function sortByName(a, b) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) {
+    return -1;
+  } else if (a.name.toLowerCase() > b.name.toLowerCase()) {
+    return 1;
+  } else {
+    return 0;
   }
-  else {
-    sortedArray = sortByName();
-  }
-  console.log(sortedArray);
 }
+
+function sortByPrice(a, b) {
+  return a.price - b.price;
+}
+
+function capture() {
+  var filterValue = document.filterBy.filter.value;
+  console.log(filterValue);
+  if (filterValue == "price") {
+    products.sort(sortByPrice);
+    console.log(products);
+    for (var i = 0; i < products.length; i++) {
+      console.log(products[i].price);
+    }
+  }
+  if (filterValue == "name") {
+    products.sort(sortByName);
+    console.log(products);
+    for (var i = 0; i < products.length; i++) {
+      console.log(products[i].name);
+    }
+  }
+  event.preventDefault();
+}
+
 
 //sum price of cart items
 function sumPrices(cartArray) {
@@ -140,31 +152,3 @@ function capture(){
 
 //to-do: print total as html to page next to cart icon, runs when item added or taken away.
 
-
-
-//Add +/- button to item listings in HTML - done
-
-
-//Define a global variable in JS, array “cart”.
-
-
-//Write onclick handler in JS that takes item names, pushes them into “cart” array if they are not yet there, removes them if they are, console logs cart.length.
-
-//Add onclick() to +/- button to trigger handler.
-
-
-//WIP if else sorting... 
-
-//var price = products.slice(0);
-//byPrice.sort(function(a,b) {
-//    return a.price - b.price;
-//});
-//console.log('by price:');
-//console.log(byPrice);
-
-//var name = products.slice(0);
-//byName.sort(function(a,b) {
-//    return a.name - b.name;
-//});
-//console.log('by name:');
-//console.log(byName);
