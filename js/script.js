@@ -56,22 +56,6 @@ var products = [
   }
 ]
 
-//sort by script
-function filterProducts() {
-
-  var sortMethod = document.sortBy.filter.value;
-  if(sortMethod == "name") {
-    sortByName();
-  }
-  
-  else if (sortMethod == "price") {
-     { 
-      sortByPrice();
-  } 
-}
-  event.preventDefault();
-}
-
 //sort by name
 function sortByName(){
   products.sort(function(a,b){
@@ -90,7 +74,21 @@ function sortByPrice() {
 });
   console.log(products);
 }
+//sort by script
+function filterProducts() {
 
+  var sortMethod = document.sortBy.filter.value;
+  if(sortMethod == "name") {
+    sortByName();
+  }
+  
+  else if (sortMethod == "price") {
+     { 
+      sortByPrice();
+  } 
+}
+  event.preventDefault();
+}
 
 
 //sum price of cart items
@@ -107,22 +105,7 @@ function sumPrices(cartArray) {
 
 }
 
-//number of items in cart - html halp on cart icon...
-function sumPrices(cartArray) {
-  // for loop through array, sum value of price attributes for each object
-  var total = 0;
-  
-  for(var i= 0; i < cartArray.length; i++) {
-
-    if(cartArray[i].price){
-          total = total + cartArray[i].price;
-    }
-  }
-
-  console.log(total);
-}
-
-//addItem script
+//addItem script - works!
 function addItem(item) {
   var ProductIndex = cart.indexOf(item); //cart is not defined error... 
   
@@ -132,7 +115,7 @@ function addItem(item) {
   console.log(cart);
 }
 
-//removeItem
+//removeItem - works!
 function removeItem(item) {
   var ProductIndex = cart.indexOf(item);
   if (ProductIndex != -1) {
