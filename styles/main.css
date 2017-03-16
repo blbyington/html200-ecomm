@@ -82,11 +82,13 @@ main {
      }
 
 header {
+  display: inline-block;
   margin-top: 0px;
   padding: 2%;
   background-color: white;
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
 header-logo{
@@ -265,7 +267,7 @@ footer p {
     max-width: 100%;
     float: center;
     margin: 0;
-    padding: 5em;
+    padding: 1em;
 }
 footer {
   margin-top: 10rem;

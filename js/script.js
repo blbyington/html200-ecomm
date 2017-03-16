@@ -54,16 +54,6 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ]
-for (var i = 0; i<products.length; i++) {
-    console.log(products[i].name);
-    console.log(products[i].description);
-    console.log(products[i].price);
-    }
-
-function capture(){
-  console.log(document.filterBy.filter.value);
-  event.preventDefault();
-}
 
 
 //sort by
@@ -103,6 +93,8 @@ function capture() {
 
 
 //sum price of cart items
+
+
 function sumPrices(cartArray) {
 
   var total = 0;
@@ -123,7 +115,8 @@ function addItem(item) {
   if (ProductIndex <= 0) {
     cart.push(item);
   }
-  console.log(cart);
+  var total = document.getElementById("items-in-cart");
+  total.innerHTML = cart.length;
 }
 
 //removeItem - works!
@@ -132,7 +125,8 @@ function removeItem(item) {
   if (ProductIndex != -1) {
     cart.splice(ProductIndex, 1);
   }
-  console.log(cart);
+  var total = document.getElementById("items-in-cart");
+  total.innerHTML = cart.length;
 }
 
 
@@ -149,6 +143,15 @@ function removeItem(item) {
     console.log(products[i].description);
     console.log(products[i].price);
   }*/
+//for (var i = 0; i<products.length; i++) {
+//    console.log(products[i].name);
+//    console.log(products[i].description);
+//    console.log(products[i].price);
+//    }
+//
+//function capture(){
+//  console.log(document.filterBy.filter.value);
+//  event.preventDefault();
+//}
 
 //to-do: print total as html to page next to cart icon, runs when item added or taken away.
-
